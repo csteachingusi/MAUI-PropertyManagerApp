@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertyManagerApp.Views.PropertiesListPage"
+             Title="Properties">
+
+    <Grid RowDefinitions="Auto,*">
+
+        <!-- Add Button -->
+        <Button Grid.Row="0"
+                Text="+ Add New Property"
+                Clicked="OnAddClicked"
+                Margin="16,12"
+                BackgroundColor="#185FA5"
+                TextColor="White" />
+
+        <!-- Properties List -->
+        <CollectionView x:Name="PropertiesCollection"
+                         Grid.Row="1"
+                         Margin="16,0">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,6" Padding="14"
+                           BorderColor="#dee3ef"
+                           CornerRadius="8">
+                        <Grid RowDefinitions="Auto,Auto,Auto"
+                              ColumnDefinitions="*,Auto,Auto,Auto">
+
+                            <!-- Property Info -->
+                            <Label Grid.Row="0" Grid.Column="0"
+                                   Text="{Binding PropertyName}"
+                                   FontAttributes="Bold"
+                                   FontSize="16" />
+                            <Label Grid.Row="1" Grid.Column="0"
+                                   Text="{Binding Address}"
+                                   TextColor="Gray" />
+                            <Label Grid.Row="2" Grid.Column="0"
+                                   Text="{Binding MonthlyRent, StringFormat='Rent: {0:C}'}"
+                                   TextColor="#185FA5"
+                                   FontAttributes="Bold" />
+
+                            <!-- Action Buttons -->
+                            <Button Grid.Row="0" Grid.Column="1"
+                                    Grid.RowSpan="3"
+                                    Text="Details"
+                                    Clicked="OnDetailsClicked"
+                                    CommandParameter="{Binding .}"
+                                    BackgroundColor="#185FA5"
+                                    TextColor="White"
+                                    Margin="4,0"
+                                    WidthRequest="70" />
+                            <Button Grid.Row="0" Grid.Column="2"
+                                    Grid.RowSpan="3"
+                                    Text="Edit"
+                                    Clicked="OnEditClicked"
+                                    CommandParameter="{Binding .}"
+                                    BackgroundColor="#639922"
+                                    TextColor="White"
+                                    Margin="4,0"
+                                    WidthRequest="60" />
+                            <Button Grid.Row="0" Grid.Column="3"
+                                    Grid.RowSpan="3"
+                                    Text="Delete"
+                                    Clicked="OnDeleteClicked"
+                                    CommandParameter="{Binding .}"
+                                    BackgroundColor="#E24B4A"
+                                    TextColor="White"
+                                    Margin="4,0"
+                                    WidthRequest="70" />
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

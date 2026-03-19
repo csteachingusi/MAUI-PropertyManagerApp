@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:PropertyManagerApp.Views"
+       x:Class="PropertyManagerApp.AppShell"
+       Title="Property Manager">
+
+    <ShellContent
+        Title="Properties"
+        ContentTemplate="{DataTemplate views:PropertiesListPage}"
+        Route="PropertiesListPage" />
+
+</Shell>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertyManagerApp.Views.PropertyDetailPage"
+             Title="Property Details">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <Frame BorderColor="#dee3ef" CornerRadius="10" Padding="20">
+                <VerticalStackLayout Spacing="12">
+
+                    <Label Text="Property Name" FontAttributes="Bold" TextColor="Gray" />
+                    <Label x:Name="NameLabel" FontSize="18" FontAttributes="Bold" />
+
+                    <Label Text="Address" FontAttributes="Bold" TextColor="Gray" />
+                    <Label x:Name="AddressLabel" />
+
+                    <Label Text="Unit Number" FontAttributes="Bold" TextColor="Gray" />
+                    <Label x:Name="UnitLabel" />
+
+                    <Label Text="Monthly Rent" FontAttributes="Bold" TextColor="Gray" />
+                    <Label x:Name="RentLabel" FontSize="20"
+                           TextColor="#185FA5" FontAttributes="Bold" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="← Back to List"
+                    Clicked="OnBackClicked"
+                    BackgroundColor="#888780"
+                    TextColor="White" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertyManagerApp.Views.AddPropertyPage"
+             Title="Add Property">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="14">
+
+            <Label Text="Property Name *" FontAttributes="Bold" />
+            <Entry x:Name="NameEntry" Placeholder="e.g. Sunset Apartments" />
+
+            <Label Text="Address" FontAttributes="Bold" />
+            <Entry x:Name="AddressEntry" Placeholder="e.g. 123 Main St" />
+
+            <Label Text="Unit Number" FontAttributes="Bold" />
+            <Entry x:Name="UnitEntry" Placeholder="e.g. 4B" />
+
+            <Label Text="Monthly Rent ($)" FontAttributes="Bold" />
+            <Entry x:Name="RentEntry"
+                   Placeholder="e.g. 1200"
+                   Keyboard="Numeric" />
+
+            <Button Text="Save Property"
+                    Clicked="OnSaveClicked"
+                    BackgroundColor="#185FA5"
+                    TextColor="White"
+                    Margin="0,10,0,0" />
+
+            <Button Text="Cancel"
+                    Clicked="OnCancelClicked"
+                    BackgroundColor="#888780"
+                    TextColor="White" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
