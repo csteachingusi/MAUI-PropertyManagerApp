@@ -19,7 +19,7 @@ namespace PropertyManagerApp
                 });
 
             // Register HttpClient
-            builder.Services.AddHttpClient<PropertyService>();
+            builder.Services.AddHttpClient<PropertyService>();            
 
             // Register pages for DI / navigation
             builder.Services.AddTransient<PropertiesListPage>();

@@ -13,7 +13,7 @@ namespace PropertyManagerApp.Services
         private readonly HttpClient _httpClient;
 
         // For Android emulator: use your wifi ipv4 address instead of localhost
-        private const string BaseUrl = "http://192.168.1.49:7239/api/Properties";
+        private const string BaseUrl = "https://127.0.0.1:7239/api/Properties";
 
         public PropertyService(HttpClient httpClient)
         {
